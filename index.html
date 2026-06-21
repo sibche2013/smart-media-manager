@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Media Manager - Documentation</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/vazirmatn-font-face.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+    <style>
+        /* Developed by Amin Arjmand | aminarjmand.com */
+        :root {
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --card-border: rgba(255, 255, 255, 0.4);
+            --text-main: #2c3e50;
+            --text-muted: #7f8c8d;
+            --accent-color: #2ecc71;
+            --accent-hover: #27ae60;
+            --code-bg: rgba(0, 0, 0, 0.04);
+            --code-text: #e74c3c;
+            --shadow: rgba(31, 38, 135, 0.06);
+        }
+
+        [data-theme="dark"] {
+            --bg-gradient: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            --card-bg: rgba(31, 41, 55, 0.7);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-color: #10b981;
+            --accent-hover: #059669;
+            --code-bg: rgba(255, 255, 255, 0.05);
+            --code-text: #f87171;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        body {
+            font-family: 'Vazirmatn', 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        body.en {
+            font-family: 'Inter', 'Vazirmatn', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        /* Top Controls Toolbar */
+        .toolbar {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .btn-control {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+            padding: 10px 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 10px var(--shadow);
+        }
+
+        .btn-control:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-1px);
+        }
+
+        /* Documentation Card */
+        .doc-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 20px 50px var(--shadow);
+        }
+
+        /* Badges Area */
+        .badge-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0 35px 0;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .badge-demo { background: #3498db; }
+        .badge-wp { background: #21759b; }
+        .badge-php { background: #617cbe; }
+
+        /* Typography */
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            font-weight: 800;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--card-border);
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            margin: 25px 0 12px 0;
+            color: var(--text-main);
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Features List Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid var(--card-border);
+            padding: 18px;
+            border-radius: 14px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        [data-theme="dark"] .feature-item {
+            background: rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .feature-text strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--text-main);
+        }
+
+        .feature-text span {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Code Block Mock */
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background: var(--code-bg);
+            color: var(--code-text);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .code-block {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 20px;
+            border-radius: 12px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 15px 0;
+            direction: ltr;
+            text-align: left;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .code-comment { color: #5c6370; font-style: italic; }
+        .code-keyword { color: #c678dd; }
+        .code-string { color: #98c379; }
+
+        /* Conditional Language Display */
+        .lang-en { display: none; }
+        body.en .lang-fa { display: none; }
+        body.en .lang-en { display: block; }
+
+        @media (max-width: 600px) {
+            .doc-card { padding: 25px; }
+            h1 { font-size: 1.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="toolbar">
+        <button class="btn-control" id="btn-lang" onclick="toggleLanguage()">
+            🌐 <span>English</span>
+        </button>
+        <button class="btn-control" id="btn-theme" onclick="toggleTheme()">
+            🌙 <span class="lang-fa">حالت تاریک</span><span class="lang-en">Dark Mode</span>
+        </button>
+    </div>
+
+    <div class="doc-card">
+        
+        <div class="lang-fa">
+            <h1>🚀 مدیریت هوشمند رسانه | Smart Media Manager</h1>
+            <p style="text-align: center; margin-top: 10px; color: var(--text-muted)">نسخه پایدار عملکردی ۱.۸ - مستندات جامع توسعه‌دهندگان</p>
+        </div>
+        
+        <div class="lang-en">
+            <h1>🚀 Smart Media Manager Layout Portal</h1>
+            <p style="text-align: center; margin-top: 10px; color: var(--text-muted)">Stable Release v1.8 - Core Engineering Documentation</p>
+        </div>
+
+        <div class="badge-wrapper">
+            <a href="https://demo.aminarjmand.com/123" target="_blank" class="badge badge-demo">⚡ Live Extension Demo</a>
+            <span class="badge badge-wp">WordPress 5.0+ Verified</span>
+            <span class="badge badge-php">PHP 7.4 / 8.x Compatible</span>
+        </div>
+
+        <div class="lang-fa">
+            <p>افزونه <strong>Smart Media Manager</strong> یک راهکار سبک، ماژولار و بسیار پیشرفته برای سیستم مدیریت رسانه وردپرس است. این سیستم با هدف بهینه‌سازی دیسک سرور، افزایش سرعت لود صفحات با تزریق لایت‌باکس‌های تاچ و مسدودسازی هوشمندانه ساخت تصاویر بندانگشتی زائد طراحی شده است.</p>
+
+            <h2>✨ قابلیت‌های کلیدی و عمیق</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">📐</div>
+                    <div class="feature-text">
+                        <strong>مدیریت ابعاد پیشرفته (ISQM)</strong>
+                        <span>جلوگیری از اسراف فضا بر روی هارد دیسک سرور با مهار کدهای فرعی قالب‌ها که به صورت خودکار انواع سایز اضافی ایجاد می‌کنند.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📸</div>
+                    <div class="feature-text">
+                        <strong>تزریق بومی فریم‌ورک Fancybox</strong>
+                        <span>اسکن خودکار کانتینرهای گالری پیش‌فرض وبلاگ، ساختارهای المنتور و گوتنبرگ و تبدیل آن‌ها به اسلایدر تمام صفحه با پشتیبانی از رفتارهای تاچ موبایل.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-text">
+                        <strong>مکانیزم هوشمند و بدون خطای Fallback</strong>
+                        <span>اگر عکسی توسط مدیر سایت حذف شده یا سایز درخواستی آن در هاست موجود نباشد، افزونه به صورت خودکار نسخه اصلی را جایگزین می‌کند تا از نمایش آیکون تصویر شکسته (404) در سایت ملوگیری شود.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💎</div>
+                    <div class="feature-text">
+                        <strong>مدیریت فشرده‌سازی تا مرز ۱۰۰٪</strong>
+                        <span>کنترل کامل خروجی تصاویر با کیفیت نهایی بدون افت پیکسل برای فایل‌های با فرمت JPEG و PNG.</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2>📖 مستندات فنی و راهنمای توسعه‌دهندگان</h2>
+            <p>این افزونه با رعایت اصول توسعه هسته وردپرس پیاده‌سازی شده و از تداخل با ساختارهای ادمین جلوگیری می‌کند:</p>
+            
+            <h3>۱. فیلترهای لایه مهار اندازه و فشرده‌سازی</h3>
+            <p>افزونه از هوک‌های زیر برای مدیریت کیفیت تصاویر استفاده می‌کند که می‌توانید کدهای خود را به آن‌ها متصل کنید:</p>
+            <div class="code-block">
+                <span class="code-comment">// مهار فشرده‌سازی پیش‌فرض هسته وردپرس</span><br>
+                <span class="code-keyword">add_filter</span>(<span class="code-string">'jpeg_quality'</span>, <span class="code-keyword">function</span>() { <span class="code-keyword">return</span> <span class="code-string">100</span>; });<br>
+                <span class="code-keyword">add_filter</span>(<span class="code-string">'wp_editor_set_quality'</span>, <span class="code-keyword">function</span>() { <span class="code-keyword">return</span> <span class="code-string">100</span>; });
+            </div>
+
+            <h3>۲. معماری تابع ضد شکستگی تصاویر (Fallback Mechanism)</h3>
+            <p>هوک <code>image_downsize</code> به شکلی شرط‌بندی شده است که آرایه‌ای شامل آدرس تصویر اصلی و ابعاد آن را برگرداند. این کار مانع از کرش یا ایجاد حلقه‌های بی‌پایان در مروگر می‌شود.</p>
+
+            <h2>🛠️ نحوه نصب و راه‌اندازی</h2>
+            <p>۱. پوشه فشرده افزونه را در مسیر <code>wp-content/plugins/</code> آپلود کنید.</p>
+            <p>۲. افزونه را از بخش مدیریت افزونه‌ها در پیشخوان وردپرس فعال نمایید.</p>
+            <p>۳. گزینه‌ها را از زیرمنوی جدید <strong>رسانه &larr; Smart Media Manager</strong> مدیریت کنید.</p>
+        </div>
+
+        <div class="lang-en">
+            <p><strong>Smart Media Manager</strong> is a modern enterprise-grade optimization toolkit designed for the WordPress Media Library architecture. It features aggressive server storage savings, unified high-performance lightbox assets orchestration, and automatic broken image container handling.</p>
+
+            <h2>✨ Advanced Deep Feature Set</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">📐</div>
+                    <div class="feature-text">
+                        <strong>Intelligent Size Quota Management (ISQM)</strong>
+                        <span>Prevents server disk storage exhaustion by blocking redundant background thumbnail layouts generated by active themes.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📸</div>
+                    <div class="feature-text">
+                        <strong>Automated Global Fancybox Hooks</strong>
+                        <span>Scans and wraps legacy core layouts, Gutenberg galleries, and Elementor media modules into dynamic touch-friendly lightboxes.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-text">
+                        <strong>Asynchronous Runtime Source Fallback</strong>
+                        <span>Interceptors listen to media request failures on front-end rendering engines and replace missing dimensions with the master resolution automatically.</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2>📖 Technical Integration Guide</h2>
+            <p>Built completely on top of non-destructive native filter architectures keeping administrative panels decoupled from functional layout shifts:</p>
+
+            <h3>1. Pixel-Perfect Compression Handlers</h3>
+            <p>The system hooks seamlessly into WordPress internal filters to override compression rules:</p>
+            <div class="code-block">
+                <span class="code-comment">// Enforce maximum lossless rendering matrix overrides</span><br>
+                <span class="code-keyword">add_filter</span>(<span class="code-string">'jpeg_quality'</span>, <span class="code-keyword">function</span>() { <span class="code-keyword">return</span> <span class="code-string">100</span>; });
+            </div>
+
+            <h3>2. Safe Context Evaluation</h3>
+            <p>The <code>image_downsize</code> logic contains context safety locks that immediately abort execution when <code>is_admin()</code> is true to protect database attachment assets metadata during editing operations.</p>
+        </div>
+
+        <div style="margin-top: 50px; text-align: center; border-top: 1px solid var(--card-border); padding-top: 20px;">
+            <p style="font-size: 0.9rem; color: var(--text-muted); text-align: center;">
+                Developed with 💚 by <a href="https://aminarjmand.com" target="_blank" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">Amin Arjmand</a>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // 1. Theme Toggle Logic
+    function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', targetTheme);
+        
+        const btnTextFa = targetTheme === 'dark' ? 'حالت روشن' : 'حالت تاریک';
+        const btnTextEn = targetTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+        
+        document.getElementById('btn-theme').innerHTML = `☀️ <span class="lang-fa">${btnTextFa}</span><span class="lang-en">${btnTextEn}</span>`;
+    }
+
+    // 2. Multilingual Switcher Logic
+    function toggleLanguage() {
+        const isEnglish = document.body.classList.toggle('en');
+        if (isEnglish) {
+            document.documentElement.setAttribute('lang', 'en');
+            document.documentElement.setAttribute('dir', 'ltr');
+            document.getElementById('btn-lang').innerHTML = `🌐 <span>فارسی</span>`;
+        } else {
+            document.documentElement.setAttribute('lang', 'fa');
+            document.documentElement.setAttribute('dir', 'rtl');
+            document.getElementById('btn-lang').innerHTML = `🌐 <span>English</span>`;
+        }
+    }
+</script>
+</body>
+</html>
