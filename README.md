@@ -1,11 +1,11 @@
 # 🚀 Smart Media Manager (v1.8)
 
 <p align="center">
-  <a target="_blank" href="https://demo.aminarjmand.com/smart-media-manager/">
+  <a target="_blank" href="https://demo.aminarjmand.com/Smart-Media-Manager/">
     <img src="https://img.shields.io/badge/Live_Demo-⚡_Launch_Plugin_Demo-blue?style=for-the-badge&logo=wordpress&logoColor=white" alt="Live Demo" />
   </a>
   &nbsp;&nbsp;
-  <a target="_blank" href="https://demo.aminarjmand.com/smart-media-manager/">
+  <a target="_blank" href="https://demo.aminarjmand.com/Smart-Media-Manager/">
     <img src="https://img.shields.io/badge/WordPress-5.0+-informational?style=for-the-badge&logo=wordpress" alt="WP Version" />
   </a>
 </p>
@@ -22,7 +22,7 @@
 
 ### 🔗 Live Preview
 Check out the fully functional plugin interface and features here:  
-👉 **[Launch Live Demo](https://demo.aminarjmand.com/smart-media-manager/)**
+👉 **[Launch Live Demo](https://demo.aminarjmand.com/Smart-Media-Manager/)**
 
 ### ✨ Key Features
 - **Disable Gutenberg Editor:** Easily switch off the heavy block editor and return to the lightweight, familiar Classic Editor environment with a single toggle.
