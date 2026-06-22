@@ -1,11 +1,11 @@
 # 🚀 Smart Media Manager (v1.8)
 
 <p align="center">
-  <a target="_blank" href="https://demo.aminarjmand.com/123">
+  <a target="_blank" href="https://demo.aminarjmand.com/smart-media-manager/">
     <img src="https://img.shields.io/badge/Live_Demo-⚡_Launch_Plugin_Demo-blue?style=for-the-badge&logo=wordpress&logoColor=white" alt="Live Demo" />
   </a>
   &nbsp;&nbsp;
-  <a target="_blank" href="https://demo.aminarjmand.com/123">
+  <a target="_blank" href="https://demo.aminarjmand.com/smart-media-manager/">
     <img src="https://img.shields.io/badge/WordPress-5.0+-informational?style=for-the-badge&logo=wordpress" alt="WP Version" />
   </a>
 </p>
@@ -18,40 +18,35 @@
 
 ## English
 
-**Smart Media Manager** is a lightweight, high-performance, and comprehensive WordPress utility plugin engineered to optimize native media handling architecture and elevate user front-end viewing experiences. It consolidates multiple core server-saving routines including bulk dynamic size blocking, pixel-perfect quality locks, global Fancybox injections, and failure-proof source fallbacks into a single dashboard.
+**Smart Media Manager** is a lightweight, efficient, and user-friendly WordPress utility plugin designed to optimize your media workflow, save server storage, and enhance front-end gallery experiences. 
 
 ### 🔗 Live Preview
-Explore the interactive plugin portal presentation framework here:  
-👉 **[Launch Live Demo](https://demo.aminarjmand.com/123)**
+Check out the fully functional plugin interface and features here:  
+👉 **[Launch Live Demo](https://demo.aminarjmand.com/smart-media-manager/)**
 
-### ✨ Core Features
-- **Intelligent Size Quota Management (ISQM):** Block the generation of bloated background theme image sizes dynamically to dramatically save host disk workspace.
-- **Uncompressed Quality Locks:** Enforce non-destructive 100% JPEG and PNG renderings via native core filters (`jpeg_quality`, `wp_editor_set_quality`).
-- **Unified Fancybox Subsystem:** Seamlessly hooks default WordPress layouts, Gutenberg blocks, and Elementor asset containers into premium touch-optimized lightboxes.
-- **Asynchronous Native Fallback:** Automatically intercepts broken link images or missing thumb requests in front-end wrappers and feeds the raw fallback master source instead.
-- **Legacy Editor Restoration:** Effortlessly toggles off block-based Gutenberg setups back to classic configurations in one click.
-
-### 📖 Developer Integration Details
-The module acts inside safe hooks limiting administrative overhead:
-1. **Fancybox Binding overrides:** Located within the core script compilation structure under `setupFancybox`. Supports customized controls, transitions, and localized parameters.
-2. **Deterministic Context Isolation:** The asset fallback filter targets explicitly front-facing components using strict metadata lookups to keep backend media attachment operations safe from loops.
+### ✨ Key Features
+- **Disable Gutenberg Editor:** Easily switch off the heavy block editor and return to the lightweight, familiar Classic Editor environment with a single toggle.
+- **100% Uncompressed Image Quality:** Bypasses default WordPress compression rules to ensure your newly uploaded JPEG and PNG images retain 100% of their original pixel quality.
+- **Dynamic Image Size Manager:** Automatically lists every image size registered by WordPress, your theme, or other plugins. You can choose exactly which sizes to block, preventing hosting space bloating.
+- **Fancybox Lightbox Integration:** Automatically detects native WordPress galleries, product images, or Gutenberg blocks and transforms them into a clean, smooth, touch-responsive Fancybox slider.
+- **Smart Image Fallback Subsystem:** Intercepts broken link requests on the front-end; if a requested thumbnail size is missing or deleted, it displays the original master image instead of a broken 404 image box.
 
 ---
 
 ## فارسی
 
-افزونه **Smart Media Manager** یک ابزار بهینه‌سازی همه‌کاره، سبک و بسیار کارآمد برای وردپرس است که با هدف ارتقای ساختار مدیریت رسانه در سرور و بهبود تجربه بصری کاربران در فرانت‌اند طراحی شده است. این سیستم قابلیت‌های متعددی نظیر جلوگیری از هدر رفتن فضای هاست، ارتقای کیفیت رندرینگ، لایت‌باکس پیشرفته و سیستم ضد تصاویر شکسته را در یک پنل متمرکز فراهم می‌کند.
+افزونه **Smart Media Manager** یک ابزار سبک، کاربردی و هوشمند برای مدیریت رسانه‌های وردپرس است که با هدف صرفه‌جویی در فضای هاست، حفظ کیفیت اصلی تصاویر و ارتقای ظاهر گالری‌های سایت طراحی شده است.
 
 ### 🔗 مشاهده پیش‌نمایش زنده
-جهت بررسی رابط کاربری و امکانات این افزونه می‌توانید روی پیوند زیر کلیک نمایید:  
-👉 **[مشاهده دمو زنده پروژه](https://demo.aminarjmand.com/123)**
+رابط کاربری و عملکرد ماژول‌های افزونه را می‌توانید در لینک زیر بررسی کنید:  
+👉 **[مشاهده دمو زنده پروژه](https://demo.aminarjmand.com/smart-media-manager/)**
 
 ### ✨ قابلیت‌های کلیدی
-- **مدیریت هوشمند ابعاد (ISQM):** جلوگیری هوشمندانه از تولید کپی‌ها و ابعاد اضافی تصاویر توسط پوسته و افزونه‌ها جهت صرفه‌جویی شدید در فضای دیسک هاست.
-- **حفظ حداکثر جزئیات تصاویر:** امکان تنظیم فشرده‌سازی خروجی فایل‌های تصاویر JPEG و PNG روی مرز ۱۰۰٪ جهت ممانعت از افت کیفیت در مانیتورهای مدرن.
-- **تزریق خودکار اسلایدر Fancybox:** شناسایی هوشمند تمام گالری‌های پیش‌فرض وبلاگ، بلاک‌های گوتنبرگ و المان‌های رسانه‌ای المنتور و تبدیل آن‌ها به اسلایدر تاچ سفارشی.
-- **مکانیزم جایگزینی هوشمند (Fallback):** پایش لینک‌ها در فرانت‌اند و هدایت خودکار درخواست‌های تصاویر گمشده یا سایزهای حذف‌شده به فایل اصلی جهت جلوگیری از نمایش تصاویر شکسته (404).
-- **سوئیچ آسان ویرایشگر:** غیرفعال‌سازی سریع گوتنبرگ و فعال‌سازی ساختار نوستالژیک و سبک ویرایشگر کلاسیک تنها با یک کلیلک.
+- **غیرفعال‌سازی گوتنبرگ:** امکان غیرفعال کردن ویرایشگر سنگین گوتنبرگ و بازگشت به ویرایشگر روان، سریع و قدیمی کلاسیک (Classic Editor) تنها با یک کلیک.
+- **حفظ کیفیت ۱۰۰٪ تصاویر:** جلوگیری از فشرده‌سازی خودکار تصاویر توسط وردپرس؛ این افزونه کیفیت فایل‌های JPG و PNG آپلودی را روی ۱۰۰٪ قفل می‌کند تا تصاویر با همان کیفیت اصلی ذخیره شوند.
+- **مدیریت ابعاد و سایزهای اضافی:** افزونه تمام سایزهایی که توسط وردپرس، پوسته یا افزونه‌های دیگر (مثل ووکامرس) ساخته می‌شوند را لیست می‌کند. شما می‌توانید انتخاب کنید کدام سایزها ساخته نشوند تا فضای هاست بیهوده اشغال نشود.
+- **نمایش گالری‌ها با اسلایدر شیک (Fancybox):** شناسایی هوشمند تمام گالری‌های ساده وردپرس یا تصاویر محصولات و تبدیل خودکار آن‌ها به لایت‌باکس Fancybox جهت نمایش تصاویر به صورت اسلایدر مدرن، تمیز و لمسی.
+- **جایگزینی هوشمند تصویر اصلی (Fallback):** اگر سایز تصویر درخواستی قالب در هاست موجود نباشد یا حذف شده باشد، افزونه نسخه اصلی عکس را جایگزین می‌کند تا از نمایش کادر تصویر شکسته (خطای 404) در فرانت‌اند جلوگیری شود.
 
 ---
 
@@ -66,7 +61,6 @@ The module acts inside safe hooks limiting administrative overhead:
 🌐 **Website:** [aminarjmand.com](https://aminarjmand.com)  
 
 ---
-⭐️ *If you found this dashboard layout useful, please give this repository a star! 
+⭐️ *If you found this plugin useful, please give this repository a star!*  
 
-
-⭐️ *اگر این مخزن برای شما مفید بود، لطفا با دادن ستاره از آن حمایت کنید!
+⭐️ *اگر این افزونه برای شما مفید بود، لطفاً با دادن ستاره از این مخزن حمایت کنید!*
